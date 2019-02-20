@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  margin: 0;
+  padding: 5px 5px;
+  font-family: Tahoma, Geneva, sans-serif;
+  background: none;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background:#e3e3e3;
+}
+
+button:active {
+  background: #b8b8b8;
+}
+
+.todo-container {
+  width: 600px;
+  margin: 100px auto;
+  padding: 0;
+  border: 1px solid #b8b8b8;
+  border-radius: 6px;
+  box-shadow: 0 0 10px;
+}
+
+.todo-heading {
+  padding: 10px;
+}
+
+.todo-heading h1 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.todo-list {
+  margin: 0;
+  padding: 0 20px;
+  list-style: none;
+  border-top: 1px solid #b8b8b8;
+  border-bottom: 1px solid #b8b8b8;
+  min-height: 300px;
+}
+
+.todo-item {
+  display: flex;
+  padding: 5px 0;
+  min-height: 40px;
+  align-items: center;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.todo-item:last-child {
+  border: none;
+}
+
+.todo-item * {
+  margin-left: 10px;
+}
+
+.todo-item-title {
+  margin-right: 10px;
+  flex: 1;
+}
+
+.todo-item-input {
+  display: none;
+}
+
+.todo-item button {
+  opacity: 0;
+}
+
+.todo-item:hover button {
+  opacity: 1;
+}
+
+.todo-item.editing .todo-item-title {
+  display: none;
+}
+
+.todo-item.editing .todo-item-input {
+  display: block;
+  margin-right: 10px;
+  padding: 5px;
+  flex: 1;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+}
+
+.todo-item.completed .todo-item-title {
+  text-decoration: line-through;
+}
+
+
+
+.todo-form {
+  display: flex;
+  padding: 10px 20px;
+  min-height: 35px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+}
+
+.todo-form button {
+  margin-left: 10px;
+  padding: 0 5px;
+  border: 1px solid #b8b8b8;
+  border-radius: 3px;
+}
+
+.hidden {
+  display: none;
+}
