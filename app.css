@@ -25,7 +25,7 @@ button:active {
   background: #b8b8b8;
 }
 
-.todo-container {
+.todo-list {
   width: 600px;
   margin: 100px auto;
   padding: 0;
@@ -34,17 +34,17 @@ button:active {
   box-shadow: 0 0 10px;
 }
 
-.todo-heading {
+.todo-list header {
   padding: 10px;
 }
 
-.todo-heading h1 {
+.todo-list header h1 {
   margin: 0;
   padding: 0;
   text-align: center;
 }
 
-.todo-list {
+.todo-items {
   margin: 0;
   padding: 0 20px;
   list-style: none;
@@ -99,7 +99,7 @@ button:active {
   border-radius: 3px;
 }
 
-.todo-item.completed .todo-item-title {
+.todo-item.done .todo-item-title {
   text-decoration: line-through;
 }
 
