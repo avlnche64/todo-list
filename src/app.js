@@ -2,6 +2,9 @@ import Model from './model';
 import View from './view';
 import Controller from './controller';
 
-console.log('начали');
+const existingTodos = JSON.parse(localStorage.getItem('todos'));
 
-const controller = new Controller(new Model(), new View());
+const view = new View();
+const model = new Model(existingTodos);
+
+const controller = new Controller(model, view);

@@ -17,7 +17,7 @@ export default class View extends EventEmitter {
       ['todo-item', `${done ? 'done' : ''}`],
       [{ name: 'id', value: id }],
       `
-      <input class="todo-item-checkbox" type="checkbox">
+      <input class="todo-item-checkbox" type="checkbox"${done ? ' checked' : ''}>
       <label class="todo-item-title">${title}</label>
       <input class="todo-item-input" type="text">
       <button class="edit-todo">Изменить</button>

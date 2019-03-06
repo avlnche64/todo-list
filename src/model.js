@@ -1,10 +1,10 @@
 import { EventEmitter } from './helpers';
 
 export default class Model extends EventEmitter {
-  constructor() {
+  constructor(existingTodos) {
     super();
 
-    this.todos = [];
+    this.todos = existingTodos || [];
   }
 
   addTodo(title) {
@@ -35,5 +35,9 @@ export default class Model extends EventEmitter {
     const togglingTodo = this.todos.find(todo => (todo.id === id));
 
     togglingTodo.done = !togglingTodo.done;
+  }
+
+  updateStorage() {
+    localStorage.setItem('todos', JSON.stringify(this.todos));
   }
 }
