@@ -20,7 +20,7 @@ export default class Model extends EventEmitter {
   }
 
   deleteTodo(id) {
-    this.todos.filter(todo => (todo.id !== id));
+    this.todos = this.todos.filter(todo => (todo.id !== id));
   }
 
   editTodo(id, title) {
